@@ -1,5 +1,10 @@
 :root {
-  --yellow: rgba(227, 177, 92);
+  /* --yellow: rgba(227, 177, 92, 1); */
+  --yellow: hsl(159, 98%, 50%);
+  --package: rgba(53, 53, 53, 1);
+  /* --package: rgba(34, 61, 73, 0.269); */
+  /* --btn-one-hover: rgb(169, 129, 60); */
+  --btn-one-hover: hsla(159, 98%, 50%, 0.378);
 }
 * {
   margin: 0;
@@ -81,7 +86,7 @@ h2 {
 }
 
 .btn-one:hover {
-  background-color: rgb(169, 129, 60);
+  background-color: var(--btn-one-hover);
 }
 .btn-two:hover {
   background-color: var(--yellow);
@@ -113,7 +118,7 @@ hr {
 }
 
 .package {
-  background-color: rgba(53, 53, 53, 1);
+  background-color: var(--package);
   max-width: 350px;
   text-align: left;
   padding: 30px 30px 50px 30px;
@@ -143,7 +148,7 @@ li::marker {
   color: var(--yellow);
 }
 
-.package div {
+.button-div {
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -187,7 +192,7 @@ li::marker {
   padding-top: 50px;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 900px) {
   .about {
     flex-wrap: wrap;
     justify-content: center;
@@ -203,7 +208,9 @@ li::marker {
 }
 
 .about img {
-  border-radius: 100%;
+  clip-path: circle(40% at 50% 50%);
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
   width: 100%;
   height: auto;
 }
@@ -229,4 +236,61 @@ li::marker {
 }
 
 .testimonials {
+  background-color: #202020;
+  padding: 60px 30px;
+}
+
+.testimonials h3 {
+  padding-bottom: 80px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.test-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonials img {
+  width: 50%;
+  height: auto;
+  clip-path: circle(38% at 50% 40%);
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  padding-bottom: 0;
+}
+
+.testimonials h2 {
+  margin-top: -50px;
+  text-align: center;
+}
+
+.pos-section {
+  background: rgba(75, 75, 75, 0.626);
+  padding: 60px;
+}
+
+.pos-banner {
+  background-color: #202020;
+  padding: 40px 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.pos-banner h1 {
+  font-size: 3.5rem;
+}
+
+footer {
+  background-color: #202020;
+  height: 50px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
